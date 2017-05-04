@@ -76,16 +76,7 @@ class NationalCompanyCredit():
                     return i
 
     def get_offset(self,offset):
-        array_x = [1.0 / 2, 3.0 / 5, 4.0 / 7, 5.0 / 9]  # 滑动的距离的乘积，最好控制在递减一半的情况
-        # array_x = [1.0 / 2, 3.0 / 5, 4.0 / 7, 5.0 / 9, 2.0 / 3]
-        total = 0
-        while total <= offset:
-            left = offset - total
-            if left <= 4:  # 当最后滑动距离小于4时，不再分割滑动距离
-                yield left
-                break
-            next_move = math.ceil(random.choice(array_x) * left)
-            total += next_move
+        # 删除轨迹代码
             yield next_move
 
     def get_page(self):
